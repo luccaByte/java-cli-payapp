@@ -1,6 +1,6 @@
 package br.com.pay.models;
 
-public class Product {
+public class Product implements Comparable<Product> {
     private String descricao;
     private double valor;
 
@@ -21,5 +21,10 @@ public class Product {
     public String toString() {
         return "Compras: [" + "descricao: " + descricao + '\'' +
                 ", valor: " + valor + "]";
+    }
+
+    @Override
+    public int compareTo(Product outroProduto) {
+        return Double.compare(this.valor, outroProduto.getValor());
     }
 }
