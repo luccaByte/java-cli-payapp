@@ -13,8 +13,4 @@ public class Pay {
     public List<Product> getProdutos() {
         return produtos;
     }
-
-    public Pay(List<Product> produtos) {
-        this.produtos = new ArrayList<>();
-    }
 }
